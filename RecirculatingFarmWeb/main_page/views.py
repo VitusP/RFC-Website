@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from .models import GalleryImage, Contact, Message
+from .models import GalleryImage, Contact, Message, ClubDescription
 
 # Home Page views
 def homepage(request):
-    return render(request, "main_page/homepage.html")
+    club_Descriptions = ClubDescription.objects
+    return render(request, "main_page/homepage.html", {'Club_Description':club_Descriptions})
 
 def galleryPage(request):
     gallery_Images =  GalleryImage.objects

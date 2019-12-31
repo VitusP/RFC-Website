@@ -30,3 +30,12 @@ class Message(models.Model):
     message = models.TextField(max_length=200, null=True)
     def __str__(self):
         return "Message: %20s" % (self.message)
+
+# Homepage Image/Description model
+class ClubDescription(models.Model):
+    # Text title
+    description_Title = models.CharField(max_length=50, null=True)
+    # Text description
+    description = models.TextField(max_length=200, null=True)
+    # Image
+    description_image = models.ImageField(null=True)
