@@ -16,7 +16,33 @@
   {% load static %}
   <!-- Content -->
 
-  <h1>HELLO WORLD! Gallery</h1>
+  <div class="row">
+    <nav>
+      <div class="nav-wrapper light-green accent-4">
+        <a href="#" class="brand-logo center">RFC</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="{% url 'homepage' %}">Homepage</a></li>
+          <li class="active"><a href="#">Gallery</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="col s12 m12 l12">
+      PARALLAX
+    </div>
+    <div class="col s12 m5 l5"> 
+      IMAGE1
+    </div>
+    <div class="col s12 m7 l7">
+      DESCRIPTION1
+    </div>
+    <div class="col s12 m12 l12">
+      PARALLAX
+    </div>
+    <div class="col s12 m12 l12">
+      FOOTER
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
