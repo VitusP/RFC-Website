@@ -9,5 +9,5 @@
   * M is the materialize object 
   */
 document.addEventListener('DOMContentLoaded', function() {
-    M.AutoInit();
+    //M.AutoInit();
 });
