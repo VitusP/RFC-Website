@@ -27,18 +27,32 @@
         </ul>
       </div>
     </nav>
+    <div class="parallax-container">
+      <div class="parallax"><img class="responsive-img" src="{% static 'images/Ensemble-example-test.png' %}"></div>
+    </div>
+    {% for description in Club_Description.all %}
+    {% if forloop.counter|divisibleby:2 %}
     <div class="col s12 m12 l12">
-      PARALLAX
+      <div class="col s12 m5 l5"> 
+        <div class=""><img class="responsive-img" src="{{ description.description_image.url }}"></div>
+      </div>
+      <div class="col s12 m7 l7">
+        <h3>{{description.description_Title}}</h3>
+        <h5>{{description.description}}</h5>
+      </div>
     </div>
-    <div class="col s12 m5 l5"> 
-      IMAGE1
-    </div>
-    <div class="col s12 m7 l7">
-      DESCRIPTION1
-    </div>
+    {% else %}
     <div class="col s12 m12 l12">
-      PARALLAX
+      <div class="col s12 m7 l7"> 
+        <h3>{{description.description_Title}}</h3>
+        <h5>{{description.description}}</h5>
+      </div>
+      <div class="col s12 m5 l5">
+        <div class=""><img class="responsive-img" src="{{ description.description_image.url }}"></div>
+      </div>
     </div>
+    {% endif %}
+    {% endfor %}
     <div class="col s12 m12 l12">
       FOOTER
     </div>
